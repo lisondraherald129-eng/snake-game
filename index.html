@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 Realistic Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="header">
+            <h1>🐍 Realistic Snake</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Score</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">High</span>
+                    <span class="value" id="highScore">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Level</span>
+                    <span class="value" id="level">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="500" height="500"></canvas>
+
+            <div class="overlay" id="overlay">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">🐍 Ready?</h2>
+                    <p id="overlayText">Arrow keys or WASD to move</p>
+                    <button id="startBtn">Start Game</button>
+                </div>
+            </div>
+
+            <div class="hud">
+                <div class="speed-meter">
+                    <div class="speed-fill" id="speedFill"></div>
+                </div>
+                <div class="day-indicator" id="dayIndicator">☀️</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <p>🎮 <strong>Arrow Keys</strong> or <strong>WASD</strong> to move</p>
+            <p>⏸️ <strong>Space</strong> pause &nbsp;•&nbsp; <strong>R</strong> restart &nbsp;•&nbsp; <strong>W</strong> toggle wrap</p>
+        </div>
+
+        <div class="mobile-controls">
+            <button class="mob-btn" data-dir="up">▲</button>
+            <div class="mob-row">
+                <button class="mob-btn" data-dir="left">◀</button>
+                <button class="mob-btn" data-dir="down">▼</button>
+                <button class="mob-btn" data-dir="right">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
